@@ -23,13 +23,14 @@ function fadeOut(element) {
 
 klasseKnapp.addEventListener("click", () => {
     fadeOut(studentNav);
-    fadeIn(klasseNav);
-}
-)
+    setTimeout(() => {
+        fadeIn(klasseNav);
+    }, 1000)
+})
 
 studentKnapp.addEventListener("click", () =>{
     fadeOut(klasseNav);
-    fadeIn(studentNav);
-}
-
-)
+    setTimeout(() => {
+        fadeIn(studentNav);
+    }, 1000)
+})
