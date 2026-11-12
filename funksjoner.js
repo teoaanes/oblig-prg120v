@@ -22,15 +22,23 @@ function fadeOut(element) {
 
 
 klasseKnapp.addEventListener("click", () => {
+    if(studentNav.classList.contains("synlig")){
     fadeOut(studentNav);
     setTimeout(() => {
         fadeIn(klasseNav);
-    }, 500)
-})
+    }, 500)}
+    else{
+        fadeIn(klasseNav);
+    }
+});
 
 studentKnapp.addEventListener("click", () =>{
-    fadeOut(klasseNav);
-    setTimeout(() => {
+    if(klasseNav.classList.contains("synlig")){
+        fadeOut(klasseNav);
+        setTimeout(() => {
+            fadeIn(studentNav);
+        }, 500)}
+    else{
         fadeIn(studentNav);
-    }, 500)
-})
+    }
+});
