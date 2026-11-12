@@ -50,9 +50,17 @@ main{
     grid-template-columns: repeat(2, 40fr);
 }
 
+.navKlasse button{
+    margin: 0.3rem;
+}
+
 .navStudent{
     display: grid;
     grid-template-columns: repeat(2, 40fr);
+}
+
+.navStudent button{
+    margin: 0.3rem;
 }
 
 button:hover{
