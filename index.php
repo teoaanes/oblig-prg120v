@@ -15,30 +15,47 @@
                 <button>Klasse</button>
                 <button>Studenter</button>
             </div>
-            <div class="navbar">
+            <div class="navbar2">
                 <button>Se</button>
                 <button>Registrer</button>
                 <button>Endre</button>
                 <button>Slett</button>
             </div>
-            <div class="navbar">
+            <div class="navbar3">
                 <button>Se</button>
                 <button>Registrer</button>
                 <button>Endre</button>
                 <button>Slett</button>
             </div>
         </nav>
-        <div class="boks" id="se" name="se">
+        <div class="klasseBokser">
+            <div class="klasseBoks" id="seKlasse" name="seKlasse">
 
-        </div>
-        <div>
+            </div>
+            <div class="klasseBoks" id="registrerKlasse" name="registrerKlasse">
 
-        </div>
-        <div>
+            </div>
+            <div class="klasseBoks" id="endreKlasse" name="endreKlasse">
 
-        </div>
-        <div>
+            </div>
+            <div class="klasseBoks" id="slettKlasse" name="slettKlasse">
 
+            </div>
         </div>
+        <div class="studentBokser">
+            <div class="studentBoks" id="seStudent" name="seStudent">
+
+            </div>
+            <div class="studentBoks" id="registrerStudent">
+
+            </div>
+            <div class="studentBoks" id="endreStudent">
+
+            </div>
+            <div class="studentBoks" id="slettStudent">
+
+            </div>
+        </div>
+
     </main>
 </body>
