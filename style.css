@@ -32,7 +32,6 @@ main{
 
 .navbar{
     display: flex;
-    background-color: #1F2937;
     padding: 0;
     width: 100%;
     overflow: auto;
@@ -44,5 +43,5 @@ main{
 }
 
 button:hover{
-    background-color: #1F2937;
+    background-color: #989ba0;
 }
