@@ -35,17 +35,24 @@ main{
     display: flex;
     padding: 0;
     width: 100%;
+    height: 100%;
     overflow: auto;
     justify-content: space-evenly;
 }
 .navbar button{
-    width: 100%;
-    height: 100%;
+    width: 50%;
+    height: 80%;
     margin: 0.5rem;
 }
 
 .navKlasse{
     display: grid;
+    grid-template-columns: repeat(2, 40fr);
+}
+
+.navStudent{
+    display: grid;
+    grid-template-columns: repeat(2, 40fr);
 }
 
 button:hover{
