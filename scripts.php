@@ -17,6 +17,22 @@ function klasseListeValg(){
         }
 }
 
-function studentListeValg(){}
+function studentListeValg(){
+    include("db-connect.php");
+
+    $sqlSetning="SELECT * FROM student ORDER BY brukernavn;";
+    $sqlResultat=mysqli_query($db, $sqlSetning) or die("servertilkobling feilet");
+
+    $antallResultat=mysqli_num_rows($sqlResultat);
+
+    for ($teller=1; $teller<= $antallResultat; $teller++){
+        $resultat=mysqli_fetch_array($sqlResultat);
+        $brukernavn=$resultat["brukernavn"];
+        $fornavn=$resultat["fornavn"];
+        $etternavn=$resultat["etternavn"];
+        
+        echo("<option value='$brukernavn'>$fornavn $etternavn</option>");
+    }
+}
 
 ?>
