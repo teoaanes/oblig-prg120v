@@ -14,6 +14,7 @@
             <option value="">Velg klasse</option>
             <?php include("scripts.php"); klasseListeValg(); ?>
         </select>
-        <input type="submit" value="Slett klasse" id="slettKlasseKnapp" name="slettKlasseKnapp" />
+        <input type="submit" value="Slett klasse" id="slettKlasseKnapp" name="slettKlasseKnapp">
+    </form>
     <script src="funksjoner.js"></script>
 </body>

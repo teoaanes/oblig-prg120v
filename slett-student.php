@@ -14,7 +14,7 @@
             <option value="">Velg Student</option>
             <?php include("scripts.php"); StudentListeValg(); ?>
         </select>
-        <input type="submit" value="Slett student" id="slettStudentKnapp" name="slettStudentKnapp" />
+        <input type="submit" value="Slett student" id="slettStudentKnapp" name="slettStudentKnapp">
     </form>
     <script src="funksjoner.js"></script>
 </body>
