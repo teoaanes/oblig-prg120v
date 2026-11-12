@@ -82,6 +82,8 @@ button:hover{
     border-radius: 0.3rem;
     margin: 0.1rem;
     width: 10rem;
+    font-size: 1rem;
+    border-style: none;
 }
 
 .knapp:hover{
