@@ -12,7 +12,7 @@
     <form method="post" action="" onSubmit="return bekreft()" id="velgKlasseListe" name="velgKlasseListe">Slett klasse</form>
         <select name="klasse">
             <option value="">Velg klasse</option>
-
+            <?php include("scripts.php"); klasseListeValg(); ?>
         </select>
         <input type="submit" value="Slett klasse" id="slettKlasseKnapp" name="slettKlasseKnapp">
     </form>
