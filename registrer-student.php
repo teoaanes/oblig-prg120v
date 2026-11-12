@@ -14,11 +14,11 @@
         <input type="text" id="registrerBrukernavn" name="registrerBrukernavn" required placeholder="Brukernavn">
         <input type="text" id="registrerFornavn" name="registrerFornavn" required placeholder="Fornavn">
         <input type="text" id="registrerEtternavn" name="registrerEtternavn" required placeholder="Etternavn">
-        <select name="student">
-            <option value="">Velg Klassekode</option>
+        <select name="student" required>
+            <option value="" disabled selected>Velg Klassekode</option>
             <?php include("scripts.php"); KlasseListeValg(); ?>
         </select>
-        <br>
+        <br><br>
         <input type="submit" value="Registrer">
     </form>
-</body>
+</body

@@ -14,7 +14,7 @@
         <input type="text" id="registrerKlasseKode" name="registrerKlasseKode" required placeholder="Klassekode">
         <input type="text" id="registrerKlasseNavn" name="registrerKlasseNavn" required placeholder="Klassenavn">
         <input type="text" id="registrerStudiumKode" name="registrerStudiumKode" required placeholder="Sudiumkode">
-        <br>
+        <br><br>
         <input type="submit" value="Registrer">
     </form>
 </body>
