@@ -12,8 +12,8 @@
         <p>Trykk på knappene for å navigere deg til riktig side</p>
         <nav>
             <div class="navbar">
-                <button id="klasseKnapp">Klasse</button>
-                <button id="studentKnapp">Studenter</button>
+                <button class="knapp" id="klasseKnapp">Klasse</button>
+                <button class="knapp" id="studentKnapp">Studenter</button>
             </div>
             <div class="navKlasse usynlig">
                 <a class="knapp" href="se-klasse.php">Se klasse</a>
