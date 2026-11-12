@@ -10,8 +10,8 @@
 <body>
     <h1>Slett student</h1>
     <form method="post" action="" onSubmit="return bekreft()" id="velgStudentListe" name="velgStudentListe">
-        <select name="student">
-            <option value="">Velg Student</option>
+        <select name="student" required>
+            <option value="" disabled selected>Velg Student</option>
             <?php include("scripts.php"); StudentListeValg(); ?>
         </select>
         <input type="submit" value="Slett student" id="slettStudentKnapp" name="slettStudentKnapp">
