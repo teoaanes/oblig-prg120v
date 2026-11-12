@@ -9,7 +9,7 @@
 
 <body>
     <h1>Slett klasse</h1>
-    <form method="post" action="" onSubmit="return bekreft()" id="velgKlasseListe" name="velgKlasseListe">Slett klasse</form>
+    <form method="post" action="" onSubmit="return bekreft()" id="velgKlasseListe" name="velgKlasseListe">
         <select name="klasse">
             <option value="">Velg klasse</option>
             <?php include("scripts.php"); klasseListeValg(); ?>

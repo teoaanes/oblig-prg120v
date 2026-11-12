@@ -8,16 +8,11 @@
 </head>
 
 <body>
-    <h1>Slett klasse</h1>
-    <form method="post" action="" onSubmit="return bekreft()" id="velgKlasseListe" name="velgKlasseListe">Klasse</form>
-        <select name="klasse">
-            <option value="">Velg klasse</option>
-            <?php include("scripts.php"); klasseListeValg(); ?>
-        </select>
-        <input type="submit" value="Endre klasse"
-    <script src="funksjoner.js"></script>
+    <h1>Registrer klasse</h1>
+    <form method="post" action="" onSubmit="return bekreft()">
+        <input type="text" id="registrerKlasseKode" name="registrerKlasseKode" required>
+        <input type="text" id="registrerKlasseNavn" name="registrerKlasseNavn" required>
+        <input type="text" id="registrerStudiumKode" name="registrerStudiumKode" required>
+        <input type="submit" value="Registrer">
+    </form>
 </body>
-
-<?php
-    if (isset($_POST) [ve]
-?>
