@@ -15,13 +15,13 @@
                 <button>Klasse</button>
                 <button>Studenter</button>
             </div>
-            <div class="navbar2">
+            <div class="navbarKlasse usynlig">
                 <button>Se</button>
                 <button>Registrer</button>
                 <button>Endre</button>
                 <button>Slett</button>
             </div>
-            <div class="navbar3">
+            <div class="navbarStudent usynlig">
                 <button>Se</button>
                 <button>Registrer</button>
                 <button>Endre</button>

@@ -1,0 +1,35 @@
+.synlig{
+    position: fixed;
+    margin: 50vh 50vw;
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.5s ease, visibility 0.5s;
+}
+
+.usynlig{
+    opacity: 0;
+    visibility: hidden;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: var(--bakgrunn);
+    color: var(--tekst);
+    margin: 0;
+}
+
+.navbar{
+    display: flex;
+    background-color: #1F2937;
+    padding: 0;
+    width: 100%;
+    overflow: auto;
+    justify-content: space-evenly;
+}
+
