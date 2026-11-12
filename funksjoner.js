@@ -1,5 +1,7 @@
-const klasseNav = document.querySelector(".navbarKlasse");
-const studentNav = document.querySelector(".navbarStudent");
+const klasseNav = document.querySelector(".navKlasse");
+const studentNav = document.querySelector(".navStudent");
+const klasseKnapp = document.querySelector("#klasseKnapp");
+const studentKnapp = document.querySelector("#studentKnapp");
 
 // Kode for å verifisere
 function confirm(){
@@ -19,3 +21,15 @@ function fadeOut(element) {
 };
 
 
+klasseKnapp.addEventListener("click", () => {
+    fadeOut(studentNav);
+    fadeIn(klasseNav);
+}
+)
+
+studentKnapp.addEventListener("click", () =>{
+    fadeOut(klasseNav);
+    fadeIn(studentNav);
+}
+
+)

@@ -30,6 +30,10 @@ main{
     width: 100%;
 }
 
+h1{
+    margin: 25vh 1rem 1rem 1rem;
+}
+
 .navbar{
     display: flex;
     padding: 0;

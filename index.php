@@ -12,8 +12,8 @@
         <p>Trykk på knappene for å navigere deg til riktig side</p>
         <nav>
             <div class="navbar">
-                <button>Klasse</button>
-                <button>Studenter</button>
+                <button id="klasseKnapp">Klasse</button>
+                <button id="studentKnapp">Studenter</button>
             </div>
             <div class="navKlasse usynlig">
                 <button>Se klasse</button>
