@@ -7,7 +7,6 @@
     <title>Obligatorisk oppgave</title>
 </head>
 <body>
-    <script src="funksjoner.js"></script>
     <main>
         <h1>Velkommen</h1>
         <p>Trykk på knappene for å navigere deg til riktig side</p>
@@ -30,4 +29,5 @@
             </div>
         </nav>
     </main>
+    <script src="funksjoner.js"></script>
 </body>
