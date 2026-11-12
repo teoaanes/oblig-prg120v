@@ -1,7 +1,5 @@
-const button = document.querySelector("#vis");
-const nettside = document.querySelector("#nettside");
-const velkommen = document.querySelector("#velkommen");
-
+const klasseNav = document.querySelector(".navbarKlasse");
+const studentNav = document.querySelector(".navbarStudent");
 
 // Kode for å verifisere
 function confirm(){
@@ -19,3 +17,5 @@ function fadeOut(element) {
     element.classList.add ("usynlig");
     element.classList.remove ("synlig");
 };
+
+
