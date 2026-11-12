@@ -84,6 +84,7 @@ button{
     width: 10em;
     font-size: 16px;
     border-style: none;
+    box-sizing: content-box;
 }
 
 .knapp:hover{
