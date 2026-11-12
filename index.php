@@ -18,13 +18,11 @@
             <div class="navKlasse usynlig">
                 <a class="knapp" href="se-klasse.php">Se klasse</a>
                 <a class="knapp" href="registrer-klasse.php">Registrer klasse</a>
-                <a class="knapp" href="endre-klasse.php">Endre klasse</a>
                 <a class="knapp" href="slett-klasse.php">Slett klasse</a>
             </div>
             <div class="navStudent usynlig">
                 <a class="knapp" href="se-student.php">Se studenter</a>
                 <a class="knapp" href="registrer-student.php">Registrer studenter</a>
-                <a class="knapp" href="endre-student.php">Endre studenter</a>
                 <a class="knapp" href="slett-student.php">Slett studenter</a>
             </div>
         </nav>
