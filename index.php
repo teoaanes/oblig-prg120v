@@ -16,16 +16,16 @@
                 <button id="studentKnapp">Studenter</button>
             </div>
             <div class="navKlasse usynlig">
-                <button>Se klasse</button>
-                <button>Registrer klasse</button>
-                <button>Endre klasse</button>
-                <button>Slett klasse</button>
+                <a class="knapp" href="se-klasse.php">Se klasse</a>
+                <a class="knapp" href="">Registrer klasse</a>
+                <a class="knapp" href="">Endre klasse</a>
+                <a class="knapp" href="">Slett klasse</a>
             </div>
             <div class="navStudent usynlig">
-                <button>Se studenter</button>
-                <button>Registrer studenter</button>
-                <button>Endre studenter</button>
-                <button>Slett studenter</button>
+                <a class="knapp" href="">Se studenter</a>
+                <a class="knapp" href="">Registrer studenter</a>
+                <a class="knapp" href="">Endre studenter</a>
+                <a class="knapp" href="">Slett studenter</a>
             </div>
         </nav>
     </main>
