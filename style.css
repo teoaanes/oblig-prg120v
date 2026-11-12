@@ -40,7 +40,8 @@ main{
 }
 .navbar button{
     width: 100%;
-    margin: 5rem;
+    height: 100%;
+    margin: 0.5rem;
 }
 
 .navKlasse{
