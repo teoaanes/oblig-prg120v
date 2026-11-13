@@ -1,6 +1,5 @@
 <?php
 function regStudent(){
-    include("scripts.php");
     $brukernavn=$_POST["registrerBrukernavn"];
     $fornavn=$_POST["registrerFornavn"];
     $etternavn=$_POST["registrerEtternavn"];
@@ -40,7 +39,7 @@ if (isset($_POST["registrerStudent"])) {
         <input type="text" id="registrerEtternavn" name="registrerEtternavn" required placeholder="Etternavn">
         <select name="velgKlasseKode" required>
             <option value="" disabled selected>Velg Klasse</option>
-            <?php include("scripts.php"); KlasseListeValg(); ?>
+            <?php include("scripts.php"); klasseListeValg(); ?>
         </select>
         <br><br>
         <input type="submit" value="Registrer" name="registrerStudent">
