@@ -10,7 +10,7 @@ function klasseListeValg(){
         $klassekode=$resultat["klassekode"];
         $klassenavn=$resultat["klassenavn"];
         
-        echo("<option value='$klassekode'> $klassenavn</option>");
+        echo("<option value='$klassekode' name='KlasseKode'> $klassenavn</option>");
         }
 }
 
@@ -68,19 +68,6 @@ function seStudent(){
 }
 
 
-function regKlasse(){
-    $klassekode=$_POST["registrerKlasseKode"];
-    $klassenavn=$_POST["registrerKlasseNavn"];
-    $studiumkode=$_POST["registrerStudiumKode"];
-
-    include("db-connect.php");
-    $sqlSetning="INSERT INTO klasse (klassekode, klassenavn, studiumkode) VALUES ('$klassekode', '$klassenavn', '$studiumkode')";
-    mysqli_query($db, $sqlSetning) or die("noe gikk galt!");
-}
-
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    regKlasse();
-}
 
 
 ?>

@@ -1,6 +1,29 @@
 <?php
-?>
+function regStudent(){
+    $brukernavn=$_POST["registrerBrukernavn"];
+    $fornavn=$_POST["registrerFornavn"];
+    $etternavn=$_POST["registrerEtternavn"];
+    $klassekode=$_POST["klasseKodeName"];
 
+    include("db-connect.php");
+    $sqlSetning="SELECT * FROM student WHERE brukernavn = '$brukernavn'";
+    $sqlResultat=mysqli_query($db, $sqlSetning) or die("oops");
+    if(mysqli_num_rows($sqlResultat)>0){
+    return "Studenten er allerede registrert!";
+    }
+    else{
+    $sqlSetning="INSERT INTO student (brukernavn, fornavn, etternavn, klassekode) VALUES ('$brukernavn', '$fornavn', '$etternavn', '$klassekode')";
+    $resultat=mysqli_query($db, $sqlSetning) or die("noe gikk galt!");
+    return "Studenten ble registrert!";
+    }
+    }
+
+$melding="";
+
+if (isset($_POST["registrerKlasse"])) {
+    $melding=regStudent();
+}
+?>
 <head>
     <meta charset="UTF-8">
     <link href="style.css" rel="stylesheet">
