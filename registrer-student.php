@@ -4,7 +4,7 @@ function regStudent(){
     $brukernavn=$_POST["registrerBrukernavn"];
     $fornavn=$_POST["registrerFornavn"];
     $etternavn=$_POST["registrerEtternavn"];
-    $klassekode=$_POST["klasseKodeName"];
+    $klassekode=$_POST["velgKlasseKode"];
 
     include("db-connect.php");
     $sqlSetning="SELECT * FROM student WHERE brukernavn = '$brukernavn'";
