@@ -21,6 +21,7 @@
 </body>
 
 <?php
+include("db-connect.php");
 function regKlasse(){
     $klassekode=$_POST["registrerKlasseKode"];
     $klassenavn=$_POST["registrerKlasseNavn"];
