@@ -9,7 +9,7 @@ function regKlasse(){
     mysqli_query($db, $sqlSetning) or die("noe gikk galt!");
 }
 
-$melding=""
+$melding="";
 
 if (isset($_POST["registrerKlasse"])) {
     if (regKlasse()){
