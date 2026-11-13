@@ -10,7 +10,7 @@ function klasseListeValg(){
         $klassekode=$resultat["klassekode"];
         $klassenavn=$resultat["klassenavn"];
         
-        echo("<option value='$klassekode' name='KlasseKode'> $klassenavn</option>");
+        echo("<option value='$klassekode' name='klasseKodeName'> $klassenavn</option>");
         }
 }
 
