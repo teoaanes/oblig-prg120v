@@ -8,7 +8,8 @@
 </head>
 
 <body>
-    <h1>På denne siden kan du se klassene som er registrert i systemet</h1>
+    <h1>Se klasser</h1>
+    <p>På denne siden kan du se klassene som er registrert i systemet</p>
     <table>
         <thead>
             <th scope="col">Klassekode</th>

@@ -8,7 +8,8 @@
 </head>
 
 <body>
-    <h1>På denne siden kan du se studentene som er registrert i systemet</h1>
+    <h1>Se studenter</h1>
+    <p>På denne siden kan du se studentene som er registrert i systemet</p>
     <table>
         <thead>
             <th scope="col">Brukernavn</th>
