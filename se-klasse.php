@@ -10,7 +10,7 @@
 <body>
     <table>
         <thead>
-
+            <?php include("scripts.php"); seKlasse(); ?>
         </thead>
     </table>
 </body>
