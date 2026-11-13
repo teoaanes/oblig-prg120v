@@ -1,5 +1,6 @@
 <?php
 $valgtStudent="";
+$melding="";
 function visStudent($valgtStudent){
     include("db-connect.php");
     $sqlSetning="SELECT * FROM student WHERE brukernavn = '$valgtStudent'";
