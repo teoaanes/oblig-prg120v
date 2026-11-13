@@ -1,13 +1,14 @@
 <?php
 $valgtStudent="";
 $melding="";
+$beskjed="";
 function visStudent($valgtStudent){
     include("db-connect.php");
     $sqlSetning="SELECT * FROM student WHERE brukernavn = '$valgtStudent'";
     $sqlResultat=mysqli_query($db, $sqlSetning);
     $resultat=mysqli_fetch_array($sqlResultat);
 
-        $melding="Brukernavn: " . $resultat["brukernavn"] . "<br>" . "Navn: " . $resultat["fornavn"] . " " . $resultat["etternavn"] . "<br>" . "Klassekode: " . $resultat["klassekode"];
+        $melding= "Du har valgt følgende student:" . "<br>" . "Brukernavn: " . $resultat["brukernavn"] . "<br>" . "Navn: " . $resultat["fornavn"] . " " . $resultat["etternavn"] . "<br>" . "Klassekode: " . $resultat["klassekode"];
         return $melding;
 }
 
@@ -20,12 +21,14 @@ function slettStudent($valgtStudent){
     include("db-connect.php");
     $sqlSetning="DELETE FROM student WHERE brukernavn = '$valgtStudent'";
     $sqlResultat=mysqli_query($db, $sqlSetning);
+    $beskjed= "Du har nå slettet bruker: " . $valgtStudent;
+    return $beskjed;
     }
 
 if (isset($_POST["slettStudentKnapp"])){
     $valgtStudent=$_POST["studentValgt"];
-    slettStudent($valgtStudent);
-}
+    $beskjed=slettStudent($valgtStudent);
+    }
 ?>
 
 <head>
@@ -46,8 +49,8 @@ if (isset($_POST["slettStudentKnapp"])){
 
     <form method="POST" action="" onSubmit="return bekreft()">
         <input type="hidden" name="studentValgt" value="<?php echo $valgtStudent; ?>">
-        <p>Du har valgt følgende student:</p><br>
         <p><?php echo $melding?></p>
+        <p><?php echo $beskjed?></p>
         <input type="submit" value="Slett student" id="slettStudentKnapp" name="slettStudentKnapp">
     </form>
     <script src="funksjoner.js"></script>
