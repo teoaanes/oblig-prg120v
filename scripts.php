@@ -6,10 +6,7 @@ function klasseListeValg(){
     $sqlSetning="SELECT * FROM klasse ORDER BY klassekode;";
     $sqlResultat=mysqli_query($db, $sqlSetning) or die("servertilkobling feilet");
 
-    $antallResultat=mysqli_num_rows($sqlResultat);
-
-    for ($teller=1; $teller<= $antallResultat; $teller++){
-        $resultat=mysqli_fetch_array($sqlResultat);
+    while ($resultat=mysqli_fetch_array($sqlResultat)){
         $klassekode=$resultat["klassekode"];
         $klassenavn=$resultat["klassenavn"];
         
@@ -23,10 +20,7 @@ function studentListeValg(){
     $sqlSetning="SELECT * FROM student ORDER BY brukernavn;";
     $sqlResultat=mysqli_query($db, $sqlSetning) or die("servertilkobling feilet");
 
-    $antallResultat=mysqli_num_rows($sqlResultat);
-
-    for ($teller=1; $teller<= $antallResultat; $teller++){
-        $resultat=mysqli_fetch_array($sqlResultat);
+    while ($resultat=mysqli_fetch_array($sqlResultat)){
         $brukernavn=$resultat["brukernavn"];
         $fornavn=$resultat["fornavn"];
         $etternavn=$resultat["etternavn"];
@@ -34,18 +28,13 @@ function studentListeValg(){
         echo("<option value='$brukernavn'>$fornavn $etternavn</option>");
     }
 }
-
-
 function seKlasse(){
     include("db-connect.php");
 
     $sqlSetning="SELECT * FROM klasse ORDER BY klassekode;";
     $sqlResultat=mysqli_query($db, $sqlSetning) or die("servertilkobling feilet");
 
-    $antallResultat=mysqli_num_rows($sqlResultat);
-
-    for ($teller=1; $teller<= $antallResultat; $teller++){
-        $resultat=mysqli_fetch_array($sqlResultat);
+    while ($resultat=mysqli_fetch_array($sqlResultat)){
         $klassekode=$resultat["klassekode"];
         $klassenavn=$resultat["klassenavn"];
         $studiumkode=$resultat["studiumkode"];
@@ -56,6 +45,41 @@ function seKlasse(){
         echo "<td>" . $studiumkode . "</td>";
         echo "</tr>";
     }
+}
+function seStudent(){
+    include("db-connect.php");
+
+    $sqlSetning="SELECT * FROM student ORDER BY brukernavn;";
+    $sqlResultat=mysqli_query($db, $sqlSetning) or die("servertilkobling feilet");
+
+    while ($resultat = mysqli_fetch_array($sqlResultat)){
+        $brukernavn=$resultat["brukernavn"];
+        $fornavn=$resultat["fornavn"];
+        $etternavn=$resultat["etternavn"];
+        $klassekode=$resultat["klassekode"];
+
+        echo "<tr>";
+        echo "<td>" . $brukernavn . "</td>";
+        echo "<td>" . $fornavn . "</td>";
+        echo "<td>" . $etternavn . "</td>";
+        echo "<td>" . $klassekode . "</td>";
+        echo "</tr>";
+    }
+}
+
+
+function regKlasse(){
+    $klassekode=$_POST["registrerKlasseKode"];
+    $klassenavn=$_POST["registrerKlasseNavn"];
+    $studiumkode=$_POST["registrerStudiumKode"];
+
+    include("db-connect.php");
+    $sqlSetning="INSERT INTO klasse (klassekode, klassenavn, studiumkode) VALUES ('$klassekode', '$klassenavn', '$studiumkode')";
+    mysqli_query($db, $sqlSetning) or die("noe gikk galt!");
+}
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    regKlasse();
 }
 
 

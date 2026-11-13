@@ -90,3 +90,7 @@ button{
 .knapp:hover{
     background-color: #989ba0;
 }
+
+td{
+    padding: 0px 2rem;
+}
