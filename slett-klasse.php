@@ -16,19 +16,19 @@ if (isset($_POST["velgKlasseKnapp"])) {
     $valgtKlasse=$_POST["klasseValgt"];
     $melding=visKlasse($valgtKlasse);
 }
-/*
-function slettStudent($valgtStudent){
+
+function slettKlasse($valgtKlasse){
     include("db-connect.php");
-    $sqlSetning="DELETE FROM student WHERE brukernavn = '$valgtStudent'";
+    $sqlSetning="DELETE FROM klasse WHERE klassekode = '$valgtKlasse'";
     $sqlResultat=mysqli_query($db, $sqlSetning);
-    $beskjed= "Du har nå slettet bruker: " . $valgtStudent;
+    $beskjed= "Du har nå slettet klasse: " . $valgtKlasse;
     return $beskjed;
     }
 
-if (isset($_POST["slettStudentKnapp"])){
-    $valgtStudent=$_POST["studentValgt"];
-    $beskjed=slettStudent($valgtStudent);
-    }*/
+if (isset($_POST["slettKlasseKnapp"])){
+    $valgtKlasse=$_POST["klasseValgt"];
+    $beskjed=slettKlasse($valgtKlasse);
+    }
 ?>
 <head>
     <meta charset="UTF-8">
@@ -38,13 +38,18 @@ if (isset($_POST["slettStudentKnapp"])){
 
 <body>
     <h1>Slett klasse</h1>
-    <form method="post" action="" onSubmit="return bekreft()" id="velgKlasseListe" name="velgKlasseListe">
+    <form method="post" action="" onSubmit="" id="velgKlasseListe" name="velgKlasseListe">
         <select name="klasseValgt" required>
             <option value="" disabled selected>Velg klasse</option>
             <?php include("scripts.php"); klasseListeValg(); ?>
         </select>
-        <input type="submit" value="Slett klasse" id="velgKlasseKnapp" name="velgKlasseKnapp">
+        <input type="submit" value="Velg klasse" id="velgKlasseKnapp" name="velgKlasseKnapp">
     </form>
-    <p><?php echo $melding;?></p>
+        <form method="POST" action="" onSubmit="return bekreft()">
+        <input type="hidden" name="klasseValgt" value="<?php echo $valgtKlasse; ?>">
+        <p><?php echo $melding?></p>
+        <p><?php echo $beskjed?></p>
+        <input type="submit" value="Slett klasse" id="slettKlasseKnapp" name="slettKlasseKnapp">
+    </form>
     <script src="funksjoner.js"></script>
 </body>
