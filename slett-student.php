@@ -15,6 +15,17 @@ if (isset($_POST["velgStudentKnapp"])) {
     $valgtStudent=$_POST["studentValgt"];
     $melding=visStudent($valgtStudent);
 }
+
+function slettStudent($valgtStudent){
+    include("db-connect.php");
+    $sqlSetning="DELETE FROM student WHERE brukernavn = '$valgtStudent'";
+    $sqlResultat=mysqli_query($db, $sqlSetning);
+    }
+
+if (isset($_POST["slettStudentKnapp"])){
+    $valgtStudent=$_POST["studentValgt"];
+    slettStudent($valgtStudent);
+}
 ?>
 
 <head>
