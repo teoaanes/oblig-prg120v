@@ -28,6 +28,7 @@ function studentListeValg(){
         echo("<option value='$brukernavn'>$fornavn $etternavn</option>");
     }
 }
+
 function seKlasse(){
     include("db-connect.php");
 
@@ -66,8 +67,5 @@ function seStudent(){
         echo "</tr>";
     }
 }
-
-
-
 
 ?>

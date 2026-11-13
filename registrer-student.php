@@ -13,7 +13,7 @@ function regStudent(){
     }
     else{
     $sqlSetning="INSERT INTO student (brukernavn, fornavn, etternavn, klassekode) VALUES ('$brukernavn', '$fornavn', '$etternavn', '$klassekode')";
-    $resultat=mysqli_query($db, $sqlSetning) or die("noe gikk galt!");
+    $resultat=mysqli_query($db, $sqlSetning) or die("noe gikk galt!"); /* Jeg er klar over at variabelen $resultat er unødvendig */
     return "Studenten ble registrert!";
     }
     }
@@ -45,4 +45,5 @@ if (isset($_POST["registrerStudent"])) {
         <input type="submit" value="Registrer" name="registrerStudent">
     </form>
     <?php echo $melding; ?>
+    <script src="funksjoner.js"></script>
 </body

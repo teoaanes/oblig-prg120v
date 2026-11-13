@@ -12,7 +12,7 @@ function regKlasse(){
     }
     else{
     $sqlSetning="INSERT INTO klasse (klassekode, klassenavn, studiumkode) VALUES ('$klassekode', '$klassenavn', '$studiumkode')";
-    $resultat=mysqli_query($db, $sqlSetning) or die("noe gikk galt!");
+    $resultat=mysqli_query($db, $sqlSetning) or die("noe gikk galt!"); /* Jeg er klar over at variabelen $resultat er unødvendig */
     return "Klassen ble registrert!";
     }
     }
