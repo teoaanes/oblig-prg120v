@@ -18,12 +18,21 @@ if (isset($_POST["velgKlasseKnapp"])) {
 }
 
 function slettKlasse($valgtKlasse){
-    include("db-connect.php");
-    $sqlSetning="DELETE FROM klasse WHERE klassekode = '$valgtKlasse'";
-    $sqlResultat=mysqli_query($db, $sqlSetning);
-    $beskjed= "Du har nå slettet klasse: " . $valgtKlasse;
-    return $beskjed;
+   include("db-connect.php");
+   $sqlSjekk="SELECT COUNT(*) FROM student WHERE klassekode = '$valgtKlasse'";
+   $sqlSend=mysqli_query($db, $sqlSjekk);
+   $studentAntall=mysqli_fetch_array($sqlSend);
+    if($studentAntall[0]==0){
+        $sqlSetning="DELETE FROM klasse WHERE klassekode = '$valgtKlasse'";
+        $sqlResultat=mysqli_query($db, $sqlSetning);
+        $beskjed= "Du har nå slettet klasse: " . $valgtKlasse;
+        return $beskjed;
     }
+    else{
+        $beskjed = "Klassen kunne ikke bli slettet, da den fortsatt inneholder elever";
+        return $beskjed;
+    }
+}
 
 if (isset($_POST["slettKlasseKnapp"])){
     $valgtKlasse=$_POST["klasseValgt"];
