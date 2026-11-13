@@ -6,8 +6,9 @@ function regKlasse(){
 
     include("db-connect.php");
     $sqlSetning="INSERT INTO klasse (klassekode, klassenavn, studiumkode) VALUES ('$klassekode', '$klassenavn', '$studiumkode')";
-    mysqli_query($db, $sqlSetning) or die("noe gikk galt!");
-}
+    $resultat=mysqli_query($db, $sqlSetning) or die("noe gikk galt!");
+    return $resultat;
+    }
 
 $melding="";
 
