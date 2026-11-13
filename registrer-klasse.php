@@ -1,27 +1,4 @@
 <?php
-?>
-
-<head>
-    <meta charset="UTF-8">
-    <link href="style.css" rel="stylesheet">
-    <title>Registrer klasse</title>
-</head>
-
-<body>
-    <h1>Registrer klasse</h1>
-    <p>I skjemaet nedenfor kan du registrere en ny klasse</p>
-    <form method="POST" action="" onSubmit="return bekreft()" name="registrerKlasse">
-        <input type="text" id="registrerKlasseKode" name="registrerKlasseKode" required placeholder="Klassekode">
-        <input type="text" id="registrerKlasseNavn" name="registrerKlasseNavn" required placeholder="Klassenavn">
-        <input type="text" id="registrerStudiumKode" name="registrerStudiumKode" required placeholder="Sudiumkode">
-        <br><br>
-        <input type="submit" value="Registrer">
-    </form>
-    <script src="funksjoner.js>"></script>
-</body>
-
-<?php
-include("db-connect.php");
 function regKlasse(){
     $klassekode=$_POST["registrerKlasseKode"];
     $klassenavn=$_POST["registrerKlasseNavn"];
@@ -33,6 +10,30 @@ function regKlasse(){
 }
 
 if (isset($_POST["registrerKlasse"])) {
-    regKlasse();
+    if (regKlasse()){
+        $melding="Klassen ble registrert!";
+    } else {
+        $melding="Noe gikk galt!";
+    }
 }
 ?>
+
+<head>
+    <meta charset="UTF-8">
+    <link href="style.css" rel="stylesheet">
+    <title>Registrer klasse</title>
+</head>
+
+<body>
+    <h1>Registrer klasse</h1>
+    <p>I skjemaet nedenfor kan du registrere en ny klasse</p>
+    <form method="POST" action="" onSubmit="return bekreft()">
+        <input type="text" id="registrerKlasseKode" name="registrerKlasseKode" required placeholder="Klassekode">
+        <input type="text" id="registrerKlasseNavn" name="registrerKlasseNavn" required placeholder="Klassenavn">
+        <input type="text" id="registrerStudiumKode" name="registrerStudiumKode" required placeholder="Sudiumkode">
+        <br><br>
+        <input type="submit" value="Registrer" name="registrerKlasse">
+    </form>
+    <?php echo ($melding); ?>
+    <script src="funksjoner.js"></script>
+</body>
