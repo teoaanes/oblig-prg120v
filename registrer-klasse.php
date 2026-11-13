@@ -9,6 +9,8 @@ function regKlasse(){
     mysqli_query($db, $sqlSetning) or die("noe gikk galt!");
 }
 
+$melding=""
+
 if (isset($_POST["registrerKlasse"])) {
     if (regKlasse()){
         $melding="Klassen ble registrert!";
