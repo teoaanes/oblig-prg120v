@@ -18,3 +18,19 @@
         <input type="submit" value="Registrer">
     </form>
 </body>
+
+<?php
+function regKlasse(){
+    $klassekode=$_POST["registrerKlasseKode"];
+    $klassenavn=$_POST["registrerKlasseNavn"];
+    $studiumkode=$_POST["registrerStudiumKode"];
+
+    include("db-connect.php");
+    $sqlSetning="INSERT INTO klasse (klassekode, klassenavn, studiumkode) VALUES ('$klassekode', '$klassenavn', '$studiumkode')";
+    mysqli_query($db, $sqlSetning) or die("noe gikk galt!");
+}
+
+if (isset($_POST["registrerKlasse"])) {
+    regKlasse();
+}
+?>
