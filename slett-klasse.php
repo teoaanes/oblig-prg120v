@@ -8,7 +8,7 @@ function visKlasse($valgtKlasse){
     $sqlResultat=mysqli_query($db, $sqlSetning);
     $resultat=mysqli_fetch_array($sqlResultat);
 
-        $melding= "Du har valgt følgende klasse:" . "<br>" . "Klassekode: " . $resultat["klassekode"] . "<br>" . "Klassenavn: " . $resultat["klassenavn"] . "<br>" . "Studiumskode: " . $resultat["studiumskode"];
+        $melding= "Du har valgt følgende klasse:" . "<br>" . "Klassekode: " . $resultat["klassekode"] . "<br>" . "Klassenavn: " . $resultat["klassenavn"] . "<br>" . "Studiumskode: " . $resultat["studiumkode"];
         return $melding;
 }
 
