@@ -1,15 +1,18 @@
 <?php
-function visStudent(){
+$valgtStudent="";
+function visStudent($valgtStudent){
     include("db-connect.php");
-    $valgtStudent=$_POST["studentValgt"];
     $sqlSetning="SELECT * FROM student WHERE brukernavn = '$valgtStudent'";
     $sqlResultat=mysqli_query($db, $sqlSetning);
     $resultat=mysqli_fetch_array($sqlResultat);
-    
-        echo $resultat["brukernavn"];
-        echo $resultat["fornavn"];
-        echo $resultat["etternavn"];
-        echo $resultat["klassekode"];
+
+        $melding="Brukernavn: " . $resultat["brukernavn"] . "<br>" . "Navn: " . $resultat["fornavn"] . " " . $resultat["etternavn"] . "<br>" . "Klassekode: " . $resultat["klassekode"];
+        return $melding;
+}
+
+if (isset($_POST["velgStudentKnapp"])) {
+    $valgtStudent=$_POST["studentValgt"];
+    $melding=visStudent($valgtStudent);
 }
 ?>
 
@@ -28,9 +31,11 @@ function visStudent(){
         </select>
         <input type="submit" value="Velg student" id="velgStudentKnapp" name="velgStudentKnapp">
     </form>
+
     <form method="POST" action="" onSubmit="return bekreft()">
+        <input type="hidden" name="studentValgt" value="<?php echo $valgtStudent; ?>">
         <p>Du har valgt følgende student:</p><br>
-        <p></p>
+        <p><?php echo $melding?></p>
         <input type="submit" value="Slett student" id="slettStudentKnapp" name="slettStudentKnapp">
     </form>
     <script src="funksjoner.js"></script>
