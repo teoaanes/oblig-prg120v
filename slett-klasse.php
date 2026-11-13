@@ -4,7 +4,7 @@ $melding="";
 $beskjed="";
 function visKlasse($valgtKlasse){
     include("db-connect.php");
-    $sqlSetning="SELECT * FROM klasse WHERE klassekode = '$valgtklasse'";
+    $sqlSetning="SELECT * FROM klasse WHERE klassekode = '$valgtKlasse'";
     $sqlResultat=mysqli_query($db, $sqlSetning);
     $resultat=mysqli_fetch_array($sqlResultat);
 
