@@ -5,19 +5,22 @@ function regKlasse(){
     $studiumkode=$_POST["registrerStudiumKode"];
 
     include("db-connect.php");
+    $sqlSetning="SELECT * FROM klasse ORDER BY klassekode";
+    $sqlResultat=mysqli_query($db, $sqlSetning) or die("oops");
+    if(mysqli_num_rows($sqlResultat)>0){
+    return "klassen er allerede registrert!";
+    }
+    else{
     $sqlSetning="INSERT INTO klasse (klassekode, klassenavn, studiumkode) VALUES ('$klassekode', '$klassenavn', '$studiumkode')";
     $resultat=mysqli_query($db, $sqlSetning) or die("noe gikk galt!");
-    return $resultat;
+    return "Klassen ble registrert!";
+    }
     }
 
 $melding="";
 
 if (isset($_POST["registrerKlasse"])) {
-    if (regKlasse()){
-        $melding="Klassen ble registrert!";
-    } else {
-        $melding="Noe gikk galt!";
-    }
+    $melding=regKlasse();
 }
 ?>
 
@@ -37,6 +40,6 @@ if (isset($_POST["registrerKlasse"])) {
         <br><br>
         <input type="submit" value="Registrer" name="registrerKlasse">
     </form>
-    <?php echo ($melding); ?>
+    <?php echo $melding; ?>
     <script src="funksjoner.js"></script>
 </body>
