@@ -1,5 +1,6 @@
 <?php
 function regStudent(){
+    include("scripts.php");
     $brukernavn=$_POST["registrerBrukernavn"];
     $fornavn=$_POST["registrerFornavn"];
     $etternavn=$_POST["registrerEtternavn"];
