@@ -25,7 +25,7 @@ function slettStudent($valgtStudent){
     return $beskjed;
     }
 
-if (isset($_POST["slettStudentKnapp"]) && !empty($_POST["klasseValgt"])){
+if (isset($_POST["slettStudentKnapp"]) && !empty($_POST["studentValgt"])){
     $valgtStudent=$_POST["studentValgt"];
     $beskjed=slettStudent($valgtStudent);
     }
