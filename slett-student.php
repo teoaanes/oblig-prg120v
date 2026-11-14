@@ -29,6 +29,9 @@ if (isset($_POST["slettStudentKnapp"]) && !empty($_POST["studentValgt"])){
     $valgtStudent=$_POST["studentValgt"];
     $beskjed=slettStudent($valgtStudent);
     }
+else{
+    echo "student ikke valgt";
+}
 ?>
 
 <head>
