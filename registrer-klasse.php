@@ -5,7 +5,7 @@ function regKlasse(){
     $studiumkode=$_POST["registrerStudiumKode"];
 
     include("db-connect.php");
-    $sqlSetning="SELECT * FROM klasse WHERE klassekode = '$klassekode'";
+    $sqlSetning="SELECT * FROM klasse WHERE LOWER(klassekode) = LOWER('$klassekode')";
     $sqlResultat=mysqli_query($db, $sqlSetning) or die("oops");
     if(mysqli_num_rows($sqlResultat)>0){
     return "klassen er allerede registrert!";
