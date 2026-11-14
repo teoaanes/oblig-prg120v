@@ -30,16 +30,13 @@ function slettKlasse($valgtKlasse){
     }
     else{
         $beskjed = "Klassen kunne ikke bli slettet, da den fortsatt inneholder elever";
-        $melding = "Velg klasse på nytt";
         return $beskjed;
-        return $melding;
     }
 }
 
 if (isset($_POST["slettKlasseKnapp"]) && !empty($_POST["klasseValgt"])){
     $valgtKlasse=$_POST["klasseValgt"];
     $beskjed=slettKlasse($valgtKlasse);
-    $melding=slettKlasse($valgtKlasse);
     }
 ?>
 <head>
