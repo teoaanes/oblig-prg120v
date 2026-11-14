@@ -21,4 +21,5 @@
             <?php include("scripts.php"); seStudent(); ?>
         </tbody>
     </table>
+    <br><a class="knapp" href="index.php">Tilbake til start</a>
 </body>

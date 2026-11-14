@@ -60,5 +60,7 @@ if (isset($_POST["slettKlasseKnapp"])){
         <p><?php echo $beskjed?></p>
         <input type="submit" value="Slett klasse" id="slettKlasseKnapp" name="slettKlasseKnapp">
     </form>
+    <br>
+    <a class="knapp" href="index.php">Tilbake til start</a>
     <script src="funksjoner.js"></script>
 </body>

@@ -53,6 +53,7 @@ if (isset($_POST["slettStudentKnapp"])){
         <p><?php echo $beskjed?></p>
         <input type="submit" value="Slett student" id="slettStudentKnapp" name="slettStudentKnapp">
     </form>
+    <br><a class="knapp" href="index.php">Tilbake til start</a>
     <script src="funksjoner.js"></script>
 </body>
 

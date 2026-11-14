@@ -20,4 +20,5 @@
             <?php include("scripts.php"); seKlasse(); ?>
         </tbody>
     </table>
+    <br><a class="knapp" href="index.php">Tilbake til start</a>
 </body>

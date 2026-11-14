@@ -41,5 +41,6 @@ if (isset($_POST["registrerKlasse"])) {
         <input type="submit" value="Registrer" name="registrerKlasse">
     </form>
     <?php echo $melding; ?>
+    <br><a class="knapp" href="index.php">Tilbake til start</a>
     <script src="funksjoner.js"></script>
 </body>
