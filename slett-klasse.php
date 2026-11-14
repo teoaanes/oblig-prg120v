@@ -58,7 +58,7 @@ if (isset($_POST["slettKlasseKnapp"])){
         <input type="hidden" name="klasseValgt" value="<?php echo $valgtKlasse; ?>">
         <p><?php echo $melding?></p>
         <p><?php echo $beskjed?></p>
-        <input type="submit" value="Slett klasse" id="slettKlasseKnapp" name="slettKlasseKnapp">
+        <input class="knapp" type="submit" value="Slett klasse" id="slettKlasseKnapp" name="slettKlasseKnapp">
     </form>
     <br>
     <a class="knapp" href="index.php">Tilbake til start</a>

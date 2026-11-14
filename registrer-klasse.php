@@ -38,7 +38,7 @@ if (isset($_POST["registrerKlasse"])) {
         <input type="text" id="registrerKlasseNavn" name="registrerKlasseNavn" required placeholder="Klassenavn">
         <input type="text" id="registrerStudiumKode" name="registrerStudiumKode" required placeholder="Sudiumkode">
         <br><br>
-        <input type="submit" value="Registrer" name="registrerKlasse">
+        <input class="knapp" type="submit" value="Registrer" name="registrerKlasse">
     </form>
     <?php echo $melding; ?>
     <br><a class="knapp" href="index.php">Tilbake til start</a>

@@ -44,14 +44,14 @@ if (isset($_POST["slettStudentKnapp"])){
             <option value="" disabled selected>Velg Student</option>
             <?php include("scripts.php"); StudentListeValg(); ?>
         </select>
-        <input type="submit" value="Velg student" id="velgStudentKnapp" name="velgStudentKnapp">
+        <input class="knapp" type="submit" value="Velg student" id="velgStudentKnapp" name="velgStudentKnapp">
     </form>
 
     <form method="POST" action="" onSubmit="return bekreft()">
         <input type="hidden" name="studentValgt" value="<?php echo $valgtStudent; ?>">
         <p><?php echo $melding?></p>
         <p><?php echo $beskjed?></p>
-        <input type="submit" value="Slett student" id="slettStudentKnapp" name="slettStudentKnapp">
+        <input class="knapp" type="submit" value="Slett student" id="slettStudentKnapp" name="slettStudentKnapp">
     </form>
     <br><a class="knapp" href="index.php">Tilbake til start</a>
     <script src="funksjoner.js"></script>

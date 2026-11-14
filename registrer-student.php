@@ -42,7 +42,7 @@ if (isset($_POST["registrerStudent"])) {
             <?php include("scripts.php"); klasseListeValg(); ?>
         </select>
         <br><br>
-        <input type="submit" value="Registrer" name="registrerStudent">
+        <input class="knapp" type="submit" value="Registrer" name="registrerStudent">
     </form>
     <?php echo $melding; ?>
     <br><a class="knapp" href="index.php">Tilbake til start</a>
