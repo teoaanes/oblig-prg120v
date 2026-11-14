@@ -13,6 +13,7 @@ html {
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.5s ease, visibility 0.5s;
+    display: none;
 }
 
 body{
@@ -52,18 +53,18 @@ h1{
     display: grid;
     grid-template-columns: repeat(2, 40fr);
     position: absolute;
-    top: 50%;
+/*    top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);*/
 }
 
 .navStudent{
     display: grid;
     grid-template-columns: repeat(2, 40fr);
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+/*    top: 50%;
+    left: 50%; 
+    transform: translate(-50%, -50%);*/
 }
 
 button:hover{
