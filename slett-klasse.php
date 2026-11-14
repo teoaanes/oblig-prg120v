@@ -1,7 +1,7 @@
 <?php
 $valgtKlasse="";
-$melding="";
-$beskjed="Klasse ikke valgt";
+$melding="Klasse ikke valgt";
+$beskjed="";
 function visKlasse($valgtKlasse){
     include("db-connect.php");
     $sqlSetning="SELECT * FROM klasse WHERE klassekode = '$valgtKlasse'";

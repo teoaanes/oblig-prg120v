@@ -1,6 +1,6 @@
 <?php
 $valgtStudent="";
-$melding="";
+$melding="Student er ikke valgt";
 $beskjed="";
 function visStudent($valgtStudent){
     include("db-connect.php");
