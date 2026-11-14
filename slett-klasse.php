@@ -30,6 +30,7 @@ function slettKlasse($valgtKlasse){
     }
     else{
         $beskjed = "Klassen kunne ikke bli slettet, da den fortsatt inneholder elever";
+        $melding = "Velg klasse på nytt";
         return $beskjed;
     }
 }
@@ -56,8 +57,8 @@ if (isset($_POST["slettKlasseKnapp"]) && !empty($_POST["klasseValgt"])){
     </form>
         <form method="POST" action="" onSubmit="return bekreft()">
         <input type="hidden" name="klasseValgt" value="<?php echo $valgtKlasse; ?>">
-        <p><?php echo $melding?></p>
         <p><?php echo $beskjed?></p>
+        <p><?php echo $melding?></p>
         <input class="knapp" type="submit" value="Slett klasse" id="slettKlasseKnapp" name="slettKlasseKnapp">
     </form>
     <br>
