@@ -34,7 +34,7 @@ function slettKlasse($valgtKlasse){
     }
 }
 
-if (isset($_POST["slettKlasseKnapp"])){
+if (isset($_POST["slettKlasseKnapp"]) && !empty($_POST["klasseValgt"])){
     $valgtKlasse=$_POST["klasseValgt"];
     $beskjed=slettKlasse($valgtKlasse);
     }
